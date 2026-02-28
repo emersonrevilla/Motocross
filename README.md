@@ -1,305 +1,120 @@
-# 🚴 Moto Glóbulo Rojo
+🚴 Moto Glóbulo Rojo
 
-Un juego de plataformas educativo basado en Pygame donde controlas un glóbulo rojo (célula sanguínea) completando misiones a través de diferentes niveles. El juego combina la física de plataformas clásicas con un enfoque temático relacionado con la biología.
+Juego de plataformas educativo desarrollado en Python con Pygame, donde controlas un glóbulo rojo que debe completar misiones a través de diferentes niveles. Combina física clásica de plataformas con una temática inspirada en la biología.
 
-## 📋 Tabla de Contenidos
+📋 Tabla de Contenidos
 
-- [Descripción General](#descripción-general)
-- [Características](#características)
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Cómo Jugar](#cómo-jugar)
-- [Controles](#controles)
-- [Mecánicas del Juego](#mecánicas-del-juego)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Estados del Juego](#estados-del-juego)
+Descripción General
 
----
+Características
 
-## 🎮 Descripción General
+Requisitos
 
-**Moto Glóbulo Rojo** es un juego de plataformas 2D desarrollado en Python con Pygame. El objetivo es controlar un glóbulo rojo que debe navegar a través de 10 niveles progresivamente más desafiantes, recolectando hierro (Fe) y evitando peligros como:
+Instalación
 
-- **Parásitos**: Obstáculos que causan daño al contacto
-- **Pinchos/Sierras**: Trampas estacionarias que reducen energía
-- **Diferentes terrenos**: Arena (fricción) e hielo (resbaladizo)
+Cómo Jugar
 
-El jugador gana energía recolectando hierro y la pierde al recibir daño. El juego termina cuando la energía llega a cero (Game Over) o cuando completas todos los 10 niveles (Victoria).
+Controles
 
----
+Mecánicas del Juego
 
-## ✨ Características
+Estructura del Proyecto
 
-- **10 Niveles Progresivos**: Dificultad creciente con diversos desafíos
-- **Sistema de Energía**: La energía del jugador aumenta recogiendo hierro y disminuye con el daño
-- **Física Realistas**: Gravedad, aceleración, fricción y saltos
-- **Terrenos Dinámicos**: 
-  - Arena: Reduce la velocidad del jugador
-  - Hielo: Aumenta la aceleración, causando deslizamiento
-- **Plataformas Móviles**: Algunos niveles incluyen plataformas que se mueven
-- **Cámara de Seguimiento**: La pantalla sigue automáticamente al jugador
-- **Interfaz Gráfica Completa**:
-  - Menú principal
-  - Pantalla de controles
-  - Barra de energía en tiempo real
-  - Contador de hierro recolectado
-  - Pantalla de nivel completado
-  - Pantalla de Game Over y Victoria
+Estados del Juego
 
----
+Configuración Personalizable
 
-## 📦 Requisitos
+Progresión de Dificultad
 
-- Python 3.8 o superior
-- Pygame
-- Paquetes listados en `requirements.txt`
+Licencia
 
----
+Mejoras Futuras
 
-## 🚀 Instalación
+🎮 Descripción General
 
-### 1. Clonar o descargar el proyecto
-```bash
+Moto Glóbulo Rojo es un juego de plataformas 2D donde controlas un glóbulo rojo que debe completar 10 niveles progresivos, recolectando hierro (Fe) y evitando peligros como:
+
+🦠 Parásitos (causan daño al contacto)
+
+🔪 Pinchos / Sierras (trampas estacionarias)
+
+🏖️ Arena (aumenta fricción)
+
+🧊 Hielo (superficie resbaladiza)
+
+El jugador:
+
+🔋 Gana energía recolectando hierro
+
+💥 Pierde energía al recibir daño
+
+☠️ Pierde si la energía llega a 0
+
+🏆 Gana si completa los 10 niveles
+
+✨ Características
+
+🎯 10 niveles progresivos
+
+🔋 Sistema de energía dinámico
+
+⚙️ Física realista (gravedad, fricción, aceleración)
+
+🏖️ Arena (reduce velocidad)
+
+🧊 Hielo (aumenta aceleración y deslizamiento)
+
+🚧 Plataformas móviles
+
+📷 Cámara que sigue al jugador
+
+🖥️ Interfaz completa:
+
+Menú principal
+
+Pantalla de controles
+
+Barra de energía
+
+Contador de hierro
+
+Pantallas de Game Over y Victoria
+
+📦 Requisitos
+
+Python 3.8 o superior
+
+Pygame
+
+Dependencias listadas en requirements.txt
+
+🚀 Instalación
+1️⃣ Clonar o descargar el proyecto
 cd "C:\revi\Cursos de certificacion\Programacion\Proyectos\Juegos\GameFinal"
-```
-
-### 2. Instalar dependencias
-```bash
+2️⃣ Instalar dependencias
 pip install -r requirements.txt
-```
 
 O manualmente:
-```bash
+
 pip install pygame
-```
-
-### 3. Ejecutar el juego
-```bash
+3️⃣ Ejecutar el juego
 python main.py
-```
+🎮 Cómo Jugar
 
----
+Inicia desde el menú principal
 
-## 🎮 Cómo Jugar
+Selecciona:
 
-1. **Inicio**: El juego comienza en el menú principal
-2. **Selecciona una opción**:
-   - `Empezar`: Inicia el juego en el nivel 1
-   - `Controles`: Muestra las teclas para jugar
-   - `Salir`: Cierra la aplicación
-3. **Objetivo de cada nivel**: Llega a la línea de meta (parte verde) en el lado derecho
-4. **Recolecta hierro**: Acumula puntos para recuperar energía
-5. **Evita peligros**: No toques parásitos ni pinchos
-6. **Progresa**: Completa todos los 10 niveles para ganar
+Empezar
 
----
+Controles
 
-## ⌨️ Controles
+Salir
 
-| Tecla | Acción |
-|-------|--------|
-| **← →** | Mover izquierda/derecha |
-| **↑** | Saltar |
-| **ESC** | Volver al menú (durante el juego) |
-| **Enter** | Seleccionar opción en menú |
-| **↑ ↓** | Navegar opciones del menú |
-| **R** | Reiniciar juego (en Game Over/Victoria) |
+Llega a la línea verde (meta)
 
-### En la pantalla de controles:
-- Presiona **ESC** para volver al menú
+Recolecta hierro para mantener tu energía
 
----
+Evita enemigos y obstáculos
 
-## 🎲 Mecánicas del Juego
-
-### Sistema de Energía
-- **Energía Inicial**: 100 puntos
-- **Máxima Energía**: 100 puntos
-- **Recolectar Hierro**: +10 energía por ítem
-- **Daño por Parásito**: -20 energía
-- **Daño por Pincho**: -15 energía
-- **Game Over**: Cuando energía ≤ 0
-
-### Física del Movimiento
-- **Aceleración Horizontal**: El movimiento es gradual, no instantáneo
-- **Gravedad**: Aplicada constantemente para caídas realistas
-- **Fricción**: Ralentiza al jugador cuando no hay entrada
-- **Salto**: Force del salto = -10 (hacia arriba)
-- **Velocidad Max**: 7 píxeles/fotograma (normal)
-
-### Terrenos Especiales
-- **Arena** (friction_multiplier = 0.5): Ralentiza el movimiento a la mitad
-- **Hielo** (acceleration_multiplier = 1.5): Acelera más rápido pero controla peor
-
-### Cámara
-- La cámara sigue horizontalmente al jugador
-- Mantiene al jugador aproximadamente en el centro de la pantalla
-- Se limita a los límites del nivel
-
----
-
-## 📁 Estructura del Proyecto
-
-```
-GameFinal/
-├── main.py                          # Archivo principal (loop del juego)
-├── constants.py                     # Constantes del juego (colores, tamaños, etc)
-├── player.py                        # Clase del jugador
-├── level.py                         # Clases para niveles y elementos
-├── ui.py                            # Sistema de interfaz gráfica
-├── requirements.txt                 # Dependencias del proyecto
-├── README.md                        # Este archivo
-└── assets/                          # Recursos del juego
-    ├── Sprites/
-    │   ├── Characters/              # Sprites del personaje
-    │   ├── Enemies/                 # Sprites de enemigos (parásitos)
-    │   ├── Tiles/                   # Sprites de plataformas, pinchos, etc
-    │   └── Backgrounds/             # Fondos de nivel
-    ├── Sounds/                      # Efectos de sonido (si existen)
-    └── Vector/                      # Gráficos vectoriales
-```
-
-### Descripción de Archivos Principales
-
-#### `main.py`
-- **Propósito**: Bucle principal del juego
-- **Contenido**:
-  - Inicialización de Pygame
-  - Gestión de eventos (entrada del usuario)
-  - Actualización de lógica del juego
-  - Renderizado (dibujado)
-  - Gerencia de estados del juego
-
-#### `constants.py`
-- **Propósito**: Almacenar todas las constantes del juego
-- **Contenido**:
-  - Dimensiones de pantalla (800x600)
-  - Propiedades del jugador (tamaño, velocidad, energía)
-  - Propiedades de enemigos y obstáculos
-  - Colores RGB
-  - Rutas de imágenes y sprites
-  - Configuración de física
-
-#### `player.py`
-- **Clase**: `Player`
-- **Responsabilidades**:
-  - Manejo de posición y colisiones
-  - Aplicación de gravedad y movimiento
-  - Gestión de energía
-  - Recolección de objetos
-  - Reproducción del sprite
-
-#### `level.py`
-- **Clases**:
-  - `Item`: Objetos recolectables (hierro)
-  - `Obstacle`: Enemigos (parásitos)
-  - `Platform`: Plataformas estáticas
-  - `MovingPlatform`: Plataformas que se mueven
-  - `Spike`: Obstáculos pinchos
-  - `FinishLine`: Meta del nivel
-  - `Level`: Estructura completa de un nivel
-
-- **Responsabilidades**:
-  - Generar aleatoriamente elementos de cada nivel
-  - Mantener referencias a todos los objetos del nivel
-  - Dibujar el nivel completo
-  - Definir propiedades del terreno
-
-#### `ui.py`
-- **Propósito**: Interfaz gráfica del usuario
-- **Contenido**:
-  - Menú principal
-  - Pantalla de controles
-  - Barra de energía
-  - Contador de score
-  - Pantalla de nivel completado
-  - Pantalla de Game Over
-  - Pantalla de Victoria
-
----
-
-## 🎯 Estados del Juego
-
-El juego tiene 6 estados principales:
-
-| Estado | Descripción |
-|--------|------------|
-| **MENU** | Pantalla de inicio con opciones (Empezar, Controles, Salir) |
-| **GAME** | Juego en ejecución, el jugador controla al glóbulo |
-| **GAME_OVER** | Juego perdido (energía ≤ 0), opciones para reiniciar o menú |
-| **CONTROLS** | Pantalla mostrando las teclas de control |
-| **LEVEL_COMPLETE_SCREEN** | Pantalla de transición entre niveles (3 segundos) |
-| **GAME_WON** | Juego completado (todas los 10 niveles), opción reiniciar |
-
----
-
-## 🔧 Configuración Personalizable
-
-Todos los valores importantes están en `constants.py`. Puedes modificar:
-
-```python
-# Dimensiones
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
-LEVEL_WIDTH = 5000
-
-# Física del jugador
-PLAYER_MAX_SPEED = 7
-GRAVITY = 0.5
-JUMP_STRENGTH = -10
-INITIAL_ENERGY = 100
-
-# Daño
-PARASITE_DAMAGE = 20
-SPIKE_DAMAGE = 15
-
-# Terrenos
-SAND_FRICTION_MULTIPLIER = 0.5
-ICE_ACCELERATION_MULTIPLIER = 1.5
-
-# Niveles
-MAX_LEVELS = 10
-LEVEL_TRANSITION_DELAY_MS = 3000
-```
-
----
-
-## 📊 Progresión de Dificultad
-
-- **Niveles 1-3**: Tutorial/fácil - Introducción a mecánicas básicas
-- **Niveles 4-6**: Medio - Aumento de obstáculos y terrenos especiales
-- **Niveles 7-10**: Difícil - Combinaciones complejas de peligros y plataformas
-
----
-
-## 🎨 Espíritu del Juego
-
-El juego educativo usa el tema de un glóbulo rojo viajando para recolectar hierro (Fe), lo que representa:
-- Aprendizaje sobre biología (células, nutrientes)
-- Mecánicas de platformers clásicos
-- Superación de desafíos progresivos
-
----
-
-## 📝 Licencia
-
-Los assets del juego (sprites, sonidos) provienen de **Kenney Assets** (Creative Commons). Ver `assets/License.txt` para más detalles.
-
----
-
-## 🤝 Contribuciones y Mejoras Futuras
-
-Posibles mejoras:
-- Agregar sistemas de partículas
-- Implementar música y efectos de sonido
-- Animaciones más elaboradas del jugador
-- Power-ups especiales
-- Contador de tiempo
-- Tabla de puntuaciones
-- Niveles generados proceduralmente
-
----
-
-¡Diviértete jugando **Moto Glóbulo Rojo**! 🎮❤️
-
- 
+Completa los 10 niveles para ganar
